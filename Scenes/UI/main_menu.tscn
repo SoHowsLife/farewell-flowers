@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://df1sg3fcn0acu"]
+
+[ext_resource type="Script" uid="uid://da8gkkkb3ojcb" path="res://Scripts/UI/main_menu.gd" id="1_5wsvm"]
+[ext_resource type="Script" uid="uid://bt68fdbdr3fu2" path="res://Scripts/UI/audio_slider.gd" id="2_i2xx2"]
+
+[node name="MainMenu" type="Control" unique_id=1857844944]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5wsvm")
+
+[node name="Main" type="BoxContainer" parent="." unique_id=1254960028]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -50.5
+offset_right = 35.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="Button" parent="Main" unique_id=516908538]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Start"
+
+[node name="Settings" type="Button" parent="Main" unique_id=853009699]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Main" unique_id=1308472064]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+
+[node name="Options" type="Panel" parent="." unique_id=530428873]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = -199.0
+offset_right = 199.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options" unique_id=1069166193]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = 5.0
+offset_right = 31.0
+offset_bottom = 28.0
+grow_horizontal = 2
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Options" unique_id=650692064]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = 58.0
+offset_right = 31.0
+offset_bottom = 81.0
+grow_horizontal = 2
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="Options" unique_id=1983445053]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 123.0
+offset_top = -112.0
+offset_right = -123.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("2_i2xx2")
+audio_bus = "Music"
+
+[node name="Label3" type="Label" parent="Options" unique_id=1236107814]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = 125.0
+offset_right = 31.0
+offset_bottom = 148.0
+grow_horizontal = 2
+text = "Sound"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundSlider" type="HSlider" parent="Options" unique_id=1494107035]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 123.0
+offset_top = -45.0
+offset_right = -123.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("2_i2xx2")
+
+[node name="Back" type="Button" parent="Options" unique_id=536343820]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -47.0
+offset_right = 22.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="Main/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Main/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
