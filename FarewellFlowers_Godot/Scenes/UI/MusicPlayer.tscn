@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://s3718txb7xl0"]
-
-[ext_resource type="Script" uid="uid://clorqndag15ra" path="res://Scripts/UI/music_player.gd" id="1_g861u"]
-
-[node name="MusicPlayer" type="AudioStreamPlayer" unique_id=508493852]
-autoplay = true
-bus = &"Music"
-script = ExtResource("1_g861u")
