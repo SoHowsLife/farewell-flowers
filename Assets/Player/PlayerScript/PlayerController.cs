@@ -21,13 +21,21 @@ public class PlayerController : MonoBehaviour
     {
         float direction = Input.GetAxis("Horizontal");
         _body.velocity = new Vector2(direction * _speed, 0f);
-        if(direction > threshold)
+        if(Mathf.Abs(direction) > 0)
         {
-            _sprite.flipX = false;
+            _animator.SetBool("isMoving", true);
+            if(direction > threshold)
+            {
+                _sprite.flipX = false;
+            }
+            else if(direction < threshold)
+            {
+                _sprite.flipX = true;
+            }
         }
-        else if(direction < threshold)
+        else
         {
-            _sprite.flipX = true;
+            _animator.SetBool("isMoving", false);
         }
     }
 }
