@@ -6,24 +6,21 @@ using UnityEngine.UI;
 
 public class TypingManager : MonoBehaviour
 {
-    public TextMeshProUGUI text;
-    private string textEntry = "";
-
+    [SerializeField] private Word selectedWord;
     // Update is called once per frame
     void Update()
     {
-        string input = Input.inputString;
+        string input = Input.inputString.ToLower();
         if (!input.Equals(""))
         {
             if (input.Equals("\b"))
             {
-                textEntry.Remove(0, textEntry.Length - 1);
+                selectedWord.backspaceLetter();
             }
             else
             {
-                textEntry = textEntry + input;
+                selectedWord.checkLetter(input[0]);
             }
-            text.text = textEntry;
         }
     }
 }
