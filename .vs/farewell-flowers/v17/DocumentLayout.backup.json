@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|c:\\users\\sohow\\documents\\github\\farewell-flowers\\assets\\typing\\scripts\\typingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\typing\\scripts\\typingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\assets\\typing\\scripts\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\typing\\scripts\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|c:\\users\\sohow\\documents\\github\\farewell-flowers\\assets\\typing\\scripts\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\typing\\scripts\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|c:\\users\\sohow\\documents\\github\\farewell-flowers\\assets\\typing\\scripts\\typingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\typing\\scripts\\typingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Word.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Typing\\Scripts\\Word.cs",
               "RelativeDocumentMoniker": "Assets\\Typing\\Scripts\\Word.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Typing\\Scripts\\Word.cs",
               "RelativeToolTip": "Assets\\Typing\\Scripts\\Word.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-01T06:46:15.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TypingManager.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Typing\\Scripts\\TypingManager.cs",
               "RelativeDocumentMoniker": "Assets\\Typing\\Scripts\\TypingManager.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Typing\\Scripts\\TypingManager.cs",
               "RelativeToolTip": "Assets\\Typing\\Scripts\\TypingManager.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDwAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-30T06:30:23.923Z",
               "EditorCaption": ""

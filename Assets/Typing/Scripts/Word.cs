@@ -17,22 +17,24 @@ public class Word : MonoBehaviour
         changeText("Testing");
     }
 
-    public void checkLetter(char letter)
+    public bool checkLetter(char letter)
     {
         if (isWrong)
         {
-            return;
+            return true;
         }
         if (letter == wordToSpell.ToLower()[index])
         {
             playerText.text = string.Format("<color=\"green\">{0}", wordToSpell.Substring(0, index + 1));
             index++;
+            return true;
         }
         else if (char.IsLetter(letter))
         {
             playerText.text = string.Format("<color=\"green\">{0}<color=\"red\">{1}", wordToSpell.Substring(0, index), wordToSpell[index]);
             isWrong = true;
         }
+        return false;
     }
 
     public void backspaceLetter()
@@ -43,10 +45,17 @@ public class Word : MonoBehaviour
             isWrong = false;
         }
     }
-    void changeText(string newWord)
+
+    public bool checkComplete()
+    {
+        return index >= wordToSpell.Length;
+    }
+    public void changeText(string newWord)
     {
         playerText.text = "";
         wordText.text = newWord;
         wordToSpell = newWord;
+        index = 0;
+        isWrong = false;
     }
 }

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class TypingManager : MonoBehaviour
 {
     [SerializeField] private Word selectedWord;
+    private int score = 0;
+    private int mistakes = 0;
     // Update is called once per frame
     void Update()
     {
@@ -19,8 +21,24 @@ public class TypingManager : MonoBehaviour
             }
             else
             {
-                selectedWord.checkLetter(input[0]);
+                if (selectedWord.checkLetter(input[0]))
+                {
+                    if (selectedWord.checkComplete())
+                    {
+                        score++;
+                        selectedWord.changeText(getRandomWord());
+                    }
+                }
+                else
+                {
+                    mistakes++;
+                }
             }
         }
+    }
+
+    string getRandomWord()
+    {
+        return "TODO";
     }
 }
