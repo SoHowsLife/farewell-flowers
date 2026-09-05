@@ -11,12 +11,6 @@ public class Word : MonoBehaviour
     private string wordToSpell = "";
     private int index = 0;
     private bool isWrong = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        changeText("Testing");
-    }
-
     public bool checkLetter(char letter)
     {
         if (isWrong)

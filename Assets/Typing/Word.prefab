@@ -109,7 +109,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -417,5 +417,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24acf81c839091f45bf9a02afa44b3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerText: {fileID: 1908819505526833201}
   wordText: {fileID: 3076204731457770104}
+  playerText: {fileID: 1908819505526833201}

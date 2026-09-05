@@ -9,6 +9,11 @@ public class TypingManager : MonoBehaviour
     [SerializeField] private Word selectedWord;
     private int score = 0;
     private int mistakes = 0;
+
+    void Start()
+    {
+        selectedWord.changeText(getRandomWord());
+    }
     // Update is called once per frame
     void Update()
     {
@@ -39,6 +44,6 @@ public class TypingManager : MonoBehaviour
 
     string getRandomWord()
     {
-        return "TODO";
+        return WordGenerator.generateWord();
     }
 }
