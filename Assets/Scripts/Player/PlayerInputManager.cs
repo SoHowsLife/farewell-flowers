@@ -10,6 +10,7 @@ namespace Player
     {
         InputAction input;
         Rigidbody rb;
+        SpriteRenderer sprite;
         [SerializeField]
         float speed;
 
@@ -22,6 +23,7 @@ namespace Player
             PlayerInput playerInput = GetComponent<PlayerInput>();
             rb = GetComponent<Rigidbody>();
             input = playerInput.actions.FindAction("Move");
+            sprite = GetComponentInChildren<SpriteRenderer>();
         }
 
         private void Start()
@@ -46,6 +48,7 @@ namespace Player
             {
                 SetVelocity(velocity = Vector3.right * input.ReadValue<Vector2>().x * speed * Time.deltaTime);
             }
+            if ((sprite.flipX && velocity.x > 0) || (!sprite.flipX && velocity.x < 0)) sprite.flipX = !sprite.flipX;
             Move();
         }
 
