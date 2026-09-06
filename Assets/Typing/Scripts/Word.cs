@@ -27,8 +27,9 @@ public class Word : MonoBehaviour
         {
             playerText.text = string.Format("<color=\"green\">{0}<color=\"red\">{1}", wordToSpell.Substring(0, index), wordToSpell[index]);
             isWrong = true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     public void backspaceLetter()

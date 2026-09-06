@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class TypingManager : MonoBehaviour
 {
     [SerializeField] private Word selectedWord;
+    [SerializeField] private TextMeshProUGUI scoreDisplay;
+    [SerializeField] private TextMeshProUGUI mistakeDisplay;
     private int score = 0;
     private int mistakes = 0;
 
@@ -32,11 +34,13 @@ public class TypingManager : MonoBehaviour
                     {
                         score++;
                         selectedWord.changeText(getRandomWord());
+                        scoreDisplay.text = string.Format("Score : {0}", score);
                     }
                 }
                 else
                 {
                     mistakes++;
+                    mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
                 }
             }
         }

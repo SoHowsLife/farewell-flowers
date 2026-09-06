@@ -7,7 +7,7 @@ public class WordGenerator : MonoBehaviour
     static int wordIndex = 0;
     private static List<string> wordList = new List<string>
     {
-        "efflorescence", "flower", "jarona", "botanical", "melancholy",
+        "milquetoast", "efflorescence", "flower", "jarona", "botanical", "melancholy",
         "somber", 
 
     };
