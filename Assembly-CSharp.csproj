@@ -56,13 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Pottery\ArrowManager.cs" />
     <Compile Include="Assets\Scripts\GameSystems\GameManager.cs" />
-    <Compile Include="Assets\Typing\Scripts\TypingManager.cs" />
-    <Compile Include="Assets\Typing\Scripts\Word.cs" />
+    <Compile Include="Assets\Scripts\Typing\TypingManager.cs" />
+    <Compile Include="Assets\Scripts\Typing\Word.cs" />
     <Compile Include="Assets\TransitionPlayerAnim.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputManager.cs" />
-    <Compile Include="Assets\Typing\Scripts\WordGenerator.cs" />
+    <Compile Include="Assets\Scripts\Typing\WordGenerator.cs" />
     <Compile Include="Assets\Scripts\GameSystems\BasicFollowCamera.cs" />
+    <Compile Include="Assets\Scripts\Pottery\ArrowObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -783,6 +785,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{28D48153-5C3E-FE25-C956-FA0309A779C1}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{E4DCCE10-C357-01A0-0711-D93EFFC7FB52}</Project>
       <Name>UnityEditor.UI</Name>
