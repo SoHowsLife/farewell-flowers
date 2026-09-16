@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ArrowManager : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class ArrowManager : MonoBehaviour
     [SerializeField] private ArrowObject LArrow;
     [SerializeField] private ArrowObject RArrow;
 
-    private List<ArrowObject> Keys;
+    [SerializeField] private Transform promptWindow;
+
+    private List<ArrowObject> keys;
     private int difficulty = 4;
     private int index = 0;
 
@@ -24,7 +27,7 @@ public class ArrowManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Keys = new List<ArrowObject>();
+        keys = new List<ArrowObject>();
         resetKeys();
     }
 
@@ -41,22 +44,22 @@ public class ArrowManager : MonoBehaviour
 
     void resetKeys()
     {
-        Keys.Clear();
+        keys.Clear();
         for(int i = 0; i < difficulty; i++)
         {
             switch(Random.Range(0, 4))
             {
                 case 0:
-                    Keys.Add(UArrow);
+                    keys.Add(Instantiate(UArrow, promptWindow));
                     break;
                 case 1:
-                    Keys.Add(DArrow);
+                    keys.Add(Instantiate(DArrow, promptWindow));
                     break;
                 case 2:
-                    Keys.Add(LArrow);
+                    keys.Add(Instantiate(LArrow, promptWindow));
                     break;
                 case 3:
-                    Keys.Add(RArrow);
+                    keys.Add(Instantiate(RArrow, promptWindow));
                     break;
                 default:
                     Debug.Log("Key Reset ERROR");

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Direction
 {
@@ -14,11 +15,11 @@ public class ArrowObject : MonoBehaviour
     [SerializeField] private Direction direction;
     [SerializeField] private Sprite pressedSprite;
     [SerializeField] private Sprite unpressedSprite;
-    private SpriteRenderer spriteRenderer;
+    private Image spriteRenderer;
 
     private void Awake()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = GetComponent<Image>();
     }
     // Start is called before the first frame update
     void Start()

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Pottery\ArrowManager.cs" />
+    <Compile Include="Assets\Scripts\Pottery\ArrowObject.cs" />
     <Compile Include="Assets\Scripts\GameSystems\GameManager.cs" />
     <Compile Include="Assets\Scripts\Typing\TypingManager.cs" />
     <Compile Include="Assets\Scripts\Typing\Word.cs" />
@@ -64,7 +65,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerInputManager.cs" />
     <Compile Include="Assets\Scripts\Typing\WordGenerator.cs" />
     <Compile Include="Assets\Scripts\GameSystems\BasicFollowCamera.cs" />
-    <Compile Include="Assets\Scripts\Pottery\ArrowObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -47,9 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UArrow: {fileID: 6846050371499115193, guid: f91e87c9869ae324a82f4877b840e6fb, type: 3}
-  DArrow: {fileID: 0}
-  LArrow: {fileID: 0}
-  RArrow: {fileID: 0}
+  DArrow: {fileID: 6846050371499115193, guid: d3d766794f6746a4a9a40b72143d42ce, type: 3}
+  LArrow: {fileID: 6846050371499115193, guid: 00d0f5aba056b1e4abc42fcde07ccd52, type: 3}
+  RArrow: {fileID: 6846050371499115193, guid: f3ef51243351b1d46a556dee57b423e3, type: 3}
+  promptWindow: {fileID: 5273125298882421413}
 --- !u!114 &4380984092907476139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +135,8 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
+  m_ChildAlignment: 4
+  m_Spacing: -92.28
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0

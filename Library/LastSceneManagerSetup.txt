@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/HenryTest.unity
+- path: Assets/Scenes/PotteryTest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
