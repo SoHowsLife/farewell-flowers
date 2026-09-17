@@ -42,4 +42,9 @@ public class ArrowObject : MonoBehaviour
         }
         return false;
     }
+
+    private void OnDestroy()
+    {
+        Destroy(gameObject);
+    }
 }

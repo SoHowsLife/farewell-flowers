@@ -34,7 +34,13 @@ public class ArrowManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Dev Key FOR TESTING
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            setDifficulty(difficulty + 1);
+            //Debug.Log(difficulty);
+            resetKeys();
+        }
     }
 
     void setDifficulty(int newDifficulty)
@@ -44,6 +50,10 @@ public class ArrowManager : MonoBehaviour
 
     void resetKeys()
     {
+        foreach(ArrowObject key in keys){
+            Destroy(key);
+        }
+        Debug.Log(keys.Count);
         keys.Clear();
         for(int i = 0; i < difficulty; i++)
         {
