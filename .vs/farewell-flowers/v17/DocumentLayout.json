@@ -48,9 +48,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInputManager.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Player\\PlayerInputManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInputManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAqwDwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:43:42.505Z"
+              "WhenOpened": "2026-09-14T05:43:42.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,9 +61,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pottery\\ArrowObject.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Pottery\\ArrowObject.cs",
               "RelativeToolTip": "Assets\\Scripts\\Pottery\\ArrowObject.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwC8AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwC8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:00:51.463Z"
+              "WhenOpened": "2026-09-14T05:00:51.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,7 +74,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pottery\\ArrowManager.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Pottery\\ArrowManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Pottery\\ArrowManager.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwFEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-11T19:27:25.43Z",
               "EditorCaption": ""
@@ -87,8 +89,7 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.visualscripting@1.7.8\\Runtime\\VisualScripting.Core\\Dependencies\\FullSerializer\\Converters\\Unity\\InputAction_DirectConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T07:18:40.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-10T07:18:40.462Z"
             },
             {
               "$type": "Document",

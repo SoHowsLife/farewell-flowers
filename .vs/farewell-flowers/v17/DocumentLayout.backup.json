@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pottery\\arrowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\assets\\scripts\\pottery\\arrowobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pottery\\arrowobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\assets\\scripts\\player\\playerinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\assets\\scripts\\pottery\\arrowobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pottery\\arrowobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Typing\\Scripts\\TypingManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,19 +42,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PlayerInputManager.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Player\\PlayerInputManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInputManager.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Player\\PlayerInputManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInputManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAADwvyYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:43:42.505Z"
+              "WhenOpened": "2026-09-14T05:43:42.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ArrowObject.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Pottery\\ArrowObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pottery\\ArrowObject.cs",
@@ -62,8 +63,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Pottery\\ArrowObject.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwC8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:00:51.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T05:00:51.463Z"
             },
             {
               "$type": "Document",
@@ -73,7 +73,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pottery\\ArrowManager.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Pottery\\ArrowManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Pottery\\ArrowManager.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAswCQAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAADwvzoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-11T19:27:25.43Z",
               "EditorCaption": ""

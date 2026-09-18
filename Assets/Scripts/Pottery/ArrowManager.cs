@@ -17,12 +17,18 @@ public class ArrowManager : MonoBehaviour
     private int difficulty = 4;
     private int index = 0;
 
-    private InputAction input;
+    private InputAction upAction;
+    private InputAction downAction;
+    private InputAction leftAction;
+    private InputAction rightAction;
 
     private void Awake()
     {
         PlayerInput playerInput = GetComponent<PlayerInput>();
-        input = playerInput.actions.FindAction("Move");
+        upAction = playerInput.actions.FindAction("Up");
+        downAction = playerInput.actions.FindAction("Down");
+        leftAction = playerInput.actions.FindAction("Left");
+        rightAction = playerInput.actions.FindAction("Right");
     }
     // Start is called before the first frame update
     void Start()
@@ -37,17 +43,45 @@ public class ArrowManager : MonoBehaviour
         //Dev Key FOR TESTING
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            setDifficulty(difficulty + 1);
+            difficulty++;
             //Debug.Log(difficulty);
             resetKeys();
         }
+        if (upAction.WasPressedThisFrame())
+        {
+            checkInput(Direction.Up);
+        }
+        else if (downAction.WasPressedThisFrame())
+        {
+            checkInput(Direction.Down);
+        }
+        else if (leftAction.WasPressedThisFrame())
+        {
+            checkInput(Direction.Left);
+        }
+        else if (rightAction.WasPressedThisFrame())
+        {
+            checkInput(Direction.Right);
+        }
     }
 
-    void setDifficulty(int newDifficulty)
+    public void checkInput(Direction dir)
     {
-        difficulty = newDifficulty;
+        Debug.Log(dir);
+        if (keys[index].pressKey(dir))
+        {
+            index++;
+            if (index >= keys.Count)
+            {
+                difficulty += 1;
+                resetKeys();
+            }
+        }
+        else
+        {
+            Debug.Log("Incorrect");
+        }
     }
-
     void resetKeys()
     {
         foreach(ArrowObject key in keys){
@@ -77,5 +111,10 @@ public class ArrowManager : MonoBehaviour
             }
         }
         index = 0;
+    }
+
+    public void onUp()
+    {
+        Debug.Log("Up");
     }
 }
