@@ -352,6 +352,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 415296264230371072, guid: 6ddcd6512f7f9bb4fb3198ae1f6c9faa, type: 3}
+      propertyPath: m_Name
+      value: PotterySprite
+      objectReference: {fileID: 0}
     - target: {fileID: 676188974316045016, guid: 6ddcd6512f7f9bb4fb3198ae1f6c9faa, type: 3}
       propertyPath: m_Name
       value: ArrowManager

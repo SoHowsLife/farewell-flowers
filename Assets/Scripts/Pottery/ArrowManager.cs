@@ -22,6 +22,8 @@ public class ArrowManager : MonoBehaviour
     private InputAction leftAction;
     private InputAction rightAction;
 
+    private Animator animator;
+
     private void Awake()
     {
         PlayerInput playerInput = GetComponent<PlayerInput>();
@@ -29,6 +31,7 @@ public class ArrowManager : MonoBehaviour
         downAction = playerInput.actions.FindAction("Down");
         leftAction = playerInput.actions.FindAction("Left");
         rightAction = playerInput.actions.FindAction("Right");
+        animator = GetComponentInChildren<Animator>();
     }
     // Start is called before the first frame update
     void Start()
@@ -71,6 +74,8 @@ public class ArrowManager : MonoBehaviour
         if (keys[index].pressKey(dir))
         {
             index++;
+            animator.SetInteger("Direction", (int)dir);
+            animator.SetTrigger("Correct");
             if (index >= keys.Count)
             {
                 difficulty += 1;
@@ -79,6 +84,8 @@ public class ArrowManager : MonoBehaviour
         }
         else
         {
+            animator.SetTrigger("Fail");
+            resetKeys();
             Debug.Log("Incorrect");
         }
     }

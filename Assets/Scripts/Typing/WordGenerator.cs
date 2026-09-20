@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WordGenerator : MonoBehaviour
 {
-    static int wordIndex = 0;
+    //static int wordIndex = 0;
     private static List<string> wordList = new List<string>
     {
         "milquetoast", "efflorescence", "flower", "jarona", "botanical", "melancholy",
