@@ -16,6 +16,7 @@ namespace GameSystems
 
         public UnityAction<bool> TogglePlayerInput;
         public UnityAction<GameObject> ChangeCameraTarget;
+        public UnityAction<string[]> TriggerDialogue;
 
         private void Awake()
         {
