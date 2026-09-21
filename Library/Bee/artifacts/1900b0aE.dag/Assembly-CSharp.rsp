@@ -327,6 +327,7 @@
 -r:"C:/Users/Sohow/Documents/GitHub/farewell-flowers/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"C:/Users/Sohow/Documents/GitHub/farewell-flowers/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"C:/Users/Sohow/Documents/GitHub/farewell-flowers/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
@@ -357,10 +358,12 @@
 "Assets/Scripts/GameSystems/BasicFollowCamera.cs"
 "Assets/Scripts/GameSystems/GameManager.cs"
 "Assets/Scripts/Player/PlayerInputManager.cs"
+"Assets/Scripts/Pottery/ArrowManager.cs"
+"Assets/Scripts/Pottery/ArrowObject.cs"
+"Assets/Scripts/Typing/TypingManager.cs"
+"Assets/Scripts/Typing/Word.cs"
+"Assets/Scripts/Typing/WordGenerator.cs"
 "Assets/TransitionPlayerAnim.cs"
-"Assets/Typing/Scripts/TypingManager.cs"
-"Assets/Typing/Scripts/Word.cs"
-"Assets/Typing/Scripts/WordGenerator.cs"
 -langversion:9.0
 
 /deterministic
