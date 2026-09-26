@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/GameSystems/BasicFollowCamera.cs"
+"Assets/Scripts/GameSystems/DialogueHandler.cs"
 "Assets/Scripts/GameSystems/GameManager.cs"
 "Assets/Scripts/Player/PlayerInputManager.cs"
 "Assets/Scripts/Pottery/ArrowManager.cs"
