@@ -22,7 +22,7 @@ public class WordGenerator : MonoBehaviour
         int index = Random.Range(0, wordList.Count);
         if (index == lastWord)
         {
-            index++;
+            index = (index + 1) % wordList.Count;
         }
         lastWord = index;
         string word = wordList[index];

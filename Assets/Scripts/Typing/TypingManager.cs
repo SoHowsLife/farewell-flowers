@@ -9,12 +9,17 @@ public class TypingManager : MonoBehaviour
     [SerializeField] private Word selectedWord;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
     [SerializeField] private TextMeshProUGUI mistakeDisplay;
+    [SerializeField] private TextMeshProUGUI timerDisplay;
+
+    [SerializeField] private float timerStart = 5.0f;
+    private float timeRemaining;
+    private bool timerPaused = true;
     private int score = 0;
     private int mistakes = 0;
 
     void Start()
     {
-        selectedWord.changeText(getRandomWord());
+        resetTyping();
     }
     // Update is called once per frame
     void Update()
@@ -28,13 +33,15 @@ public class TypingManager : MonoBehaviour
             }
             else
             {
+                timerPaused = false;
                 if (selectedWord.checkLetter(input[0]))
                 {
                     if (selectedWord.checkComplete())
                     {
                         score++;
-                        selectedWord.changeText(getRandomWord());
+                        resetTyping();
                         scoreDisplay.text = string.Format("Score : {0}", score);
+                        return;
                     }
                 }
                 else
@@ -44,8 +51,31 @@ public class TypingManager : MonoBehaviour
                 }
             }
         }
+        if (!timerPaused)
+        {
+            timeRemaining -= Time.deltaTime;
+
+            float seconds = Mathf.FloorToInt(timeRemaining % 60);
+
+            timerDisplay.text = string.Format("00:{0:00}", seconds);
+            if (timeRemaining <= 0)
+            {
+                resetTyping();
+                mistakes++;
+                mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+            }
+        }
     }
 
+    void resetTyping()
+    {
+        timerPaused = true;
+        timeRemaining = timerStart;
+
+        float seconds = Mathf.FloorToInt(timeRemaining % 60);
+        timerDisplay.text = string.Format("00:{0:00}", seconds);
+        selectedWord.changeText(getRandomWord());
+    }
     string getRandomWord()
     {
         return WordGenerator.generateWord();
