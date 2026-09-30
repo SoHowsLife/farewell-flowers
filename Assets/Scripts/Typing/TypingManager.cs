@@ -10,20 +10,31 @@ public class TypingManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreDisplay;
     [SerializeField] private TextMeshProUGUI mistakeDisplay;
     [SerializeField] private TextMeshProUGUI timerDisplay;
+    [SerializeField] private Canvas failScreen;
+    [SerializeField] private Canvas winScreen;
+
 
     [SerializeField] private float timerStart = 5.0f;
+    private bool pauseGame = true;
     private float timeRemaining;
     private bool timerPaused = true;
     private int score = 0;
     private int mistakes = 0;
 
+    [SerializeField] private int allowedMistakes = 5;
+    [SerializeField] private int scoreGoal = 5;
+
     void Start()
     {
-        resetTyping();
+        resetGame();
     }
     // Update is called once per frame
     void Update()
     {
+        if (pauseGame)
+        {
+            return;
+        }
         string input = Input.inputString.ToLower();
         if (!input.Equals(""))
         {
@@ -39,15 +50,18 @@ public class TypingManager : MonoBehaviour
                     if (selectedWord.checkComplete())
                     {
                         score++;
-                        resetTyping();
+                        resetWord();
                         scoreDisplay.text = string.Format("Score : {0}", score);
+                        if (score >= scoreGoal)
+                        {
+                            gameWin();
+                        }
                         return;
                     }
                 }
                 else
                 {
-                    mistakes++;
-                    mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+                    playerMistake();
                 }
             }
         }
@@ -60,14 +74,23 @@ public class TypingManager : MonoBehaviour
             timerDisplay.text = string.Format("00:{0:00}", seconds);
             if (timeRemaining <= 0)
             {
-                resetTyping();
-                mistakes++;
-                mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+                resetWord();
+                playerMistake();
             }
         }
     }
 
-    void resetTyping()
+    void playerMistake()
+    {
+        mistakes++;
+        mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+        if (mistakes >= allowedMistakes)
+        {
+            gameLoss();
+        }
+    }
+
+    void resetWord()
     {
         timerPaused = true;
         timeRemaining = timerStart;
@@ -76,6 +99,34 @@ public class TypingManager : MonoBehaviour
         timerDisplay.text = string.Format("00:{0:00}", seconds);
         selectedWord.changeText(getRandomWord());
     }
+
+    public void resetGame()
+    {
+        score = 0;
+        mistakes = 0;
+        scoreDisplay.text = string.Format("Score : {0}", score);
+        mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+        selectedWord.gameObject.SetActive(true);
+        resetWord();
+        pauseGame = false;
+        failScreen.gameObject.SetActive(false);
+        winScreen.gameObject.SetActive(false);
+    }
+
+    void gameLoss()
+    {
+        pauseGame = true;
+        selectedWord.gameObject.SetActive(false);
+        failScreen.gameObject.SetActive(true);
+    }
+
+    void gameWin()
+    {
+        pauseGame = true;
+        selectedWord.gameObject.SetActive(false);
+        winScreen.gameObject.SetActive(true);
+    }
+
     string getRandomWord()
     {
         return WordGenerator.generateWord();
