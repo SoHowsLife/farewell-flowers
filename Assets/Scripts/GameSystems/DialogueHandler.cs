@@ -31,6 +31,7 @@ namespace GameSystems
 
         private void Update()
         {
+            if (!dialogueBox.activeSelf) return;
             if (Input.GetMouseButtonDown(0))
             {
                 if (text.text == lines[index])
@@ -52,6 +53,7 @@ namespace GameSystems
             lines = dialogue;
             dialogueBox.SetActive(true);
             StartCoroutine(DisplayText());
+            GameManager.gameManager.TogglePlayerInput(false);
         }
 
         IEnumerator DisplayText()
@@ -71,7 +73,11 @@ namespace GameSystems
                 text.text = "";
                 StartCoroutine(DisplayText());
             }
-            else dialogueBox.SetActive(false);
+            else
+            {
+                GameManager.gameManager.TogglePlayerInput(true);
+                dialogueBox.SetActive(false);
+            }
         }
     }
 }

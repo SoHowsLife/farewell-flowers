@@ -9,6 +9,8 @@ namespace GameSystems
     public class GameManager : MonoBehaviour
     {
         public static GameManager gameManager;
+
+        public DiaryManager DiaryManager;
         PlayerInputManager player;
         BasicFollowCamera cam;
 
@@ -25,6 +27,7 @@ namespace GameSystems
 
             player = GameObject.Find("Player").GetComponent<PlayerInputManager>();
             cam = GameObject.Find("Main Camera").GetComponent<BasicFollowCamera>();
+            DiaryManager = GetComponent<DiaryManager>();
         }
     }
 }
