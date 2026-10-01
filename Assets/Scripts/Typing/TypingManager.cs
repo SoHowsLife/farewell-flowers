@@ -6,23 +6,32 @@ using UnityEngine.UI;
 
 public class TypingManager : MonoBehaviour
 {
+    [Header("Components References")]
     [SerializeField] private Word selectedWord;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
-    [SerializeField] private TextMeshProUGUI mistakeDisplay;
+    [SerializeField] private TextMeshProUGUI charlotteDisplay;
     [SerializeField] private TextMeshProUGUI timerDisplay;
     [SerializeField] private Canvas failScreen;
     [SerializeField] private Canvas winScreen;
 
+    [Header("Minigame Config")]
+    [Tooltip("How long the minigame will take.")]
+    [SerializeField] private float timerStart = 120.0f;
 
-    [SerializeField] private float timerStart = 5.0f;
     private bool pauseGame = true;
     private float timeRemaining;
     private bool timerPaused = true;
     private int score = 0;
-    private int mistakes = 0;
 
-    [SerializeField] private int allowedMistakes = 5;
-    [SerializeField] private int scoreGoal = 5;
+    [Header("Charlotte Config")]
+    [SerializeField] private float charlotteStart = 4.0f;
+    [SerializeField] private float charlotteRange = 1.0f;
+    private int charlotteScore = 0;
+    private float charlotteTimer;
+
+
+    //private int mistakes = 0;
+    //[SerializeField] private int allowedMistakes = 5;
 
     void Start()
     {
@@ -51,63 +60,82 @@ public class TypingManager : MonoBehaviour
                     {
                         score++;
                         resetWord();
-                        scoreDisplay.text = string.Format("Score : {0}", score);
-                        if (score >= scoreGoal)
-                        {
-                            gameWin();
-                        }
+                        scoreDisplay.text = string.Format("Your Score : {0}", score);
                         return;
                     }
                 }
-                else
-                {
-                    playerMistake();
-                }
+                //else
+                //{
+                //    playerMistake();
+                //}
             }
         }
         if (!timerPaused)
         {
             timeRemaining -= Time.deltaTime;
+            charlotteTimer -= Time.deltaTime;
 
+            float minutes = Mathf.FloorToInt(timeRemaining / 60);
             float seconds = Mathf.FloorToInt(timeRemaining % 60);
 
-            timerDisplay.text = string.Format("00:{0:00}", seconds);
+            timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
             if (timeRemaining <= 0)
             {
-                resetWord();
-                playerMistake();
+                if (score > charlotteScore)
+                {
+                    gameWin();
+                }
+                else
+                {
+                    gameLoss();
+                }
+                //playerMistake();
+                return;
+            }
+            if (charlotteTimer <= 0)
+            {
+                charlotteScore++;
+                charlotteDisplay.text = string.Format("Charlotte's Score : {0}", charlotteScore);
+                charlotteTimer = charlotteStart + Random.Range(-charlotteRange, charlotteRange);
             }
         }
     }
 
-    void playerMistake()
-    {
-        mistakes++;
-        mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
-        if (mistakes >= allowedMistakes)
-        {
-            gameLoss();
-        }
-    }
+    //void playerMistake()
+    //{
+    //    mistakes++;
+    //    mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+    //    if (mistakes >= allowedMistakes)
+    //    {
+    //        gameLoss();
+    //    }
+    //}
 
     void resetWord()
     {
-        timerPaused = true;
-        timeRemaining = timerStart;
-
-        float seconds = Mathf.FloorToInt(timeRemaining % 60);
-        timerDisplay.text = string.Format("00:{0:00}", seconds);
         selectedWord.changeText(getRandomWord());
     }
 
     public void resetGame()
     {
         score = 0;
-        mistakes = 0;
-        scoreDisplay.text = string.Format("Score : {0}", score);
-        mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+        charlotteScore = 0;
+        //mistakes = 0;
+
+        scoreDisplay.text = string.Format("Your Score : {0}", score);
+        charlotteDisplay.text = string.Format("Charlotte's Score : {0}", charlotteScore);
+        //mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
+
+        charlotteTimer = charlotteStart + Random.Range(-charlotteRange, charlotteRange);
+
+        timeRemaining = timerStart;
+        float minutes = Mathf.FloorToInt(timeRemaining / 60);
+        float seconds = Mathf.FloorToInt(timeRemaining % 60);
+        timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
         selectedWord.gameObject.SetActive(true);
         resetWord();
+        timerPaused = true;
         pauseGame = false;
         failScreen.gameObject.SetActive(false);
         winScreen.gameObject.SetActive(false);
@@ -118,6 +146,7 @@ public class TypingManager : MonoBehaviour
         pauseGame = true;
         selectedWord.gameObject.SetActive(false);
         failScreen.gameObject.SetActive(true);
+        timerDisplay.text = "00:00";
     }
 
     void gameWin()
@@ -125,6 +154,7 @@ public class TypingManager : MonoBehaviour
         pauseGame = true;
         selectedWord.gameObject.SetActive(false);
         winScreen.gameObject.SetActive(true);
+        timerDisplay.text = "00:00";
     }
 
     string getRandomWord()
