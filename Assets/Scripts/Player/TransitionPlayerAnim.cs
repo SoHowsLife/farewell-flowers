@@ -19,9 +19,9 @@ public class TransitionPlayerAnim : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.GetComponent<Animator>().runtimeAnimatorController = controller;
-        GameManager.gameManager.TogglePlayerInput.Invoke(false);
-        GameManager.gameManager.Player.SetVelocity(Vector3.right * transitionSpeed * Time.deltaTime);
-        Invoke("CompleteTransition", 3);
+        //GameManager.gameManager.TogglePlayerInput.Invoke(false);
+        //GameManager.gameManager.Player.SetVelocity(Vector3.right * transitionSpeed * Time.deltaTime);
+        //Invoke("CompleteTransition", 3);
     }
 
     public void CompleteTransition()

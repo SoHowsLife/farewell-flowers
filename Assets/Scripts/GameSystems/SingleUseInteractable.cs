@@ -13,7 +13,7 @@ namespace GameSystems
             {
                 await gameTrigger.Trigger();
             }
-            gameObject.SetActive(false);
+            enabled = false;
         }
     }
 }

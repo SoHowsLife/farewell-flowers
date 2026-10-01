@@ -8,6 +8,7 @@ namespace GameSystems.Triggers
     public class DialogueTrigger : GameTrigger
     {
         [SerializeField]
+        [TextArea]
         string[] dialogue;
 
         async public override Task<bool> Trigger()

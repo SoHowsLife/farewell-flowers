@@ -14,6 +14,7 @@ namespace Player
         Rigidbody rb;
         BoxCollider col;
         SpriteRenderer sprite;
+        Animator anim;
         [SerializeField]
         float speed;
 
@@ -31,6 +32,7 @@ namespace Player
             interact = playerInput.actions.FindAction("Interact");
             sprite = GetComponentInChildren<SpriteRenderer>();
             col = GetComponent<BoxCollider>();
+            anim = GetComponent<Animator>();
         }
 
         private void Start()
@@ -64,6 +66,7 @@ namespace Player
         public void TogglePlayerInputs(bool toggle)
         {
             readInputs = toggle;
+            SetVelocity(Vector3.zero);
         }
 
 
@@ -85,6 +88,7 @@ namespace Player
         public void Move()
         {
             rb.velocity = velocity;
+            anim.SetBool("IsMoving", rb.velocity != Vector3.zero);
         }
     }
 }
