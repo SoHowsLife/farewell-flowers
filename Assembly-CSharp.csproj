@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Pottery\ArrowManager.cs" />
     <Compile Include="Assets\Scripts\Pottery\ArrowObject.cs" />
+    <Compile Include="Assets\Scripts\GameSystems\DialogueHandler.cs" />
     <Compile Include="Assets\Scripts\GameSystems\GameManager.cs" />
     <Compile Include="Assets\Scripts\Typing\TypingManager.cs" />
     <Compile Include="Assets\Scripts\Typing\Word.cs" />
