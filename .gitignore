@@ -110,3 +110,5 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ss]ceneDependencyCache*
 
 Artifacts/
+/Library
+/Logs
