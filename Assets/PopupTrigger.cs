@@ -12,6 +12,7 @@ namespace GameSystems.Triggers
 
         async public override Task<bool> Trigger()
         {
+            GameManager.gameManager.TogglePlayerInput(false);
             GameManager.gameManager.SetPopup(sprite);
             return true;
         }
