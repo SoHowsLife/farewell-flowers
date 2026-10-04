@@ -57,5 +57,10 @@ namespace GameSystems
             popup.sprite = sprite;
             popup.enabled = true;
         }
+
+        public void ToogglePlayerInputHelper(bool toggle)
+        {
+            TogglePlayerInput.Invoke(toggle);
+        }
     }
 }

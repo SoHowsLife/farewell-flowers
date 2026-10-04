@@ -26,7 +26,7 @@ public class TransitionPlayerAnim : MonoBehaviour
 
     public void CompleteTransition()
     {
-        GameManager.gameManager.TogglePlayerInput.Invoke(true);
+        //GameManager.gameManager.TogglePlayerInput.Invoke(true);
         col.isTrigger = false;
     }
 }

@@ -7,13 +7,16 @@ namespace GameSystems
 {
     public class SingleUseInteractable : Interactable
     {
+        bool used = false;
         async public override void Interact()
         {
+            if (used) return;
+
             foreach (GameTrigger gameTrigger in GetComponents<GameTrigger>())
             {
                 await gameTrigger.Trigger();
             }
-            enabled = false;
+            used = true;
         }
     }
 }
