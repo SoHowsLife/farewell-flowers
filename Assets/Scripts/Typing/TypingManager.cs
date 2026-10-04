@@ -29,15 +29,10 @@ public class TypingManager : MonoBehaviour
     private int charlotteScore = 0;
     private float charlotteTimer;
 
-
-    //private int mistakes = 0;
-    //[SerializeField] private int allowedMistakes = 5;
-
     void Start()
     {
         resetGame();
     }
-    // Update is called once per frame
     void Update()
     {
         if (pauseGame)
@@ -89,7 +84,6 @@ public class TypingManager : MonoBehaviour
                 {
                     gameLoss();
                 }
-                //playerMistake();
                 return;
             }
             if (charlotteTimer <= 0)
@@ -101,16 +95,6 @@ public class TypingManager : MonoBehaviour
         }
     }
 
-    //void playerMistake()
-    //{
-    //    mistakes++;
-    //    mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
-    //    if (mistakes >= allowedMistakes)
-    //    {
-    //        gameLoss();
-    //    }
-    //}
-
     void resetWord()
     {
         selectedWord.changeText(getRandomWord());
@@ -120,11 +104,9 @@ public class TypingManager : MonoBehaviour
     {
         score = 0;
         charlotteScore = 0;
-        //mistakes = 0;
 
         scoreDisplay.text = string.Format("Your Score : {0}", score);
         charlotteDisplay.text = string.Format("Charlotte's Score : {0}", charlotteScore);
-        //mistakeDisplay.text = string.Format("Mistakes : {0}", mistakes);
 
         charlotteTimer = charlotteStart + Random.Range(-charlotteRange, charlotteRange);
 
@@ -139,6 +121,12 @@ public class TypingManager : MonoBehaviour
         pauseGame = false;
         failScreen.gameObject.SetActive(false);
         winScreen.gameObject.SetActive(false);
+    }
+
+    public void continueGame()
+    {
+        Debug.Log("Go to next Scene");
+        //TO DO
     }
 
     void gameLoss()

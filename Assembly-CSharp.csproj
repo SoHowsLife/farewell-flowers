@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerInputManager.cs" />
     <Compile Include="Assets\Scripts\Typing\WordGenerator.cs" />
     <Compile Include="Assets\Scripts\GameSystems\BasicFollowCamera.cs" />
+    <Compile Include="Assets\Minigame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

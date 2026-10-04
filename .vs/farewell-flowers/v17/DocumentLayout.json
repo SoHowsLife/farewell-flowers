@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\typing\\typingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|c:\\users\\sohow\\documents\\github\\farewell-flowers\\assets\\scripts\\typing\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\typing\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\assets\\scripts\\player\\playerinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C9A40D8-9D9F-EEFF-C10F-5600A6FFC70E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,8 +50,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Word.cs",
+              "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Typing\\Word.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Typing\\Word.cs",
+              "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Typing\\Word.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Typing\\Word.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T04:02:53.322Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -56,14 +73,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Typing\\TypingManager.cs",
               "ToolTip": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Typing\\TypingManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Typing\\TypingManager.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowD4AAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-26T05:59:08.944Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "WordGenerator.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Typing\\WordGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Typing\\WordGenerator.cs",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TransitionPlayerAnim.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\TransitionPlayerAnim.cs",
               "RelativeDocumentMoniker": "Assets\\TransitionPlayerAnim.cs",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerInputManager.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Player\\PlayerInputManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInputManager.cs",
@@ -95,12 +112,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInputManager.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAwwDwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:43:42.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T05:43:42.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ArrowObject.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Pottery\\ArrowObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pottery\\ArrowObject.cs",
@@ -108,12 +124,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Pottery\\ArrowObject.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwC8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:00:51.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T05:00:51.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ArrowManager.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Scripts\\Pottery\\ArrowManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pottery\\ArrowManager.cs",
@@ -121,12 +136,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Pottery\\ArrowManager.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwFcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T19:27:25.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T19:27:25.43Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "InputAction_DirectConverter.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Library\\PackageCache\\com.unity.visualscripting@1.7.8\\Runtime\\VisualScripting.Core\\Dependencies\\FullSerializer\\Converters\\Unity\\InputAction_DirectConverter.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.visualscripting@1.7.8\\Runtime\\VisualScripting.Core\\Dependencies\\FullSerializer\\Converters\\Unity\\InputAction_DirectConverter.cs",
@@ -138,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "WordGenerator.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Typing\\Scripts\\WordGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Typing\\Scripts\\WordGenerator.cs",
@@ -149,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TypingManager.cs",
               "DocumentMoniker": "C:\\Users\\Sohow\\Documents\\GitHub\\farewell-flowers\\Assets\\Typing\\Scripts\\TypingManager.cs",
               "RelativeDocumentMoniker": "Assets\\Typing\\Scripts\\TypingManager.cs",
