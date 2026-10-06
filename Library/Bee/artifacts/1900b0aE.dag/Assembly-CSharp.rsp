@@ -358,6 +358,7 @@
 "Assets/Scripts/GameSystems/BasicFollowCamera.cs"
 "Assets/Scripts/GameSystems/DialogueHandler.cs"
 "Assets/Scripts/GameSystems/GameManager.cs"
+"Assets/Scripts/Minigames/Dating/DatingManager.cs"
 "Assets/Scripts/Minigames/Minigame.cs"
 "Assets/Scripts/Minigames/Pottery/ArrowManager.cs"
 "Assets/Scripts/Minigames/Pottery/ArrowObject.cs"

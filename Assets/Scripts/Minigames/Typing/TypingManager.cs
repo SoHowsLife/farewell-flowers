@@ -8,15 +8,18 @@ public class TypingManager : MonoBehaviour
 {
     [Header("Components References")]
     [SerializeField] private Word selectedWord;
+    [SerializeField] private Canvas scoreUI;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
     [SerializeField] private TextMeshProUGUI charlotteDisplay;
-    [SerializeField] private TextMeshProUGUI timerDisplay;
+    //[SerializeField] private TextMeshProUGUI timerDisplay;
     [SerializeField] private Canvas failScreen;
     [SerializeField] private Canvas winScreen;
 
     [Header("Minigame Config")]
-    [Tooltip("How long the minigame will take.")]
-    [SerializeField] private float timerStart = 120.0f;
+    [Tooltip("First to Score Wins")]
+    [SerializeField] private int scoreGoal = 10;
+    //[SerializeField] private float timerStart = 120.0f;
+
 
     private bool pauseGame = true;
     private float timeRemaining;
@@ -56,6 +59,10 @@ public class TypingManager : MonoBehaviour
                         score++;
                         resetWord();
                         scoreDisplay.text = string.Format("Your Score : {0}", score);
+                        if (score >= scoreGoal)
+                        {
+                            gameWin();
+                        }
                         return;
                     }
                 }
@@ -67,29 +74,33 @@ public class TypingManager : MonoBehaviour
         }
         if (!timerPaused)
         {
-            timeRemaining -= Time.deltaTime;
+            //timeRemaining -= Time.deltaTime;
             charlotteTimer -= Time.deltaTime;
 
-            float minutes = Mathf.FloorToInt(timeRemaining / 60);
-            float seconds = Mathf.FloorToInt(timeRemaining % 60);
+            //float minutes = Mathf.FloorToInt(timeRemaining / 60);
+            //float seconds = Mathf.FloorToInt(timeRemaining % 60);
 
-            timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-            if (timeRemaining <= 0)
-            {
-                if (score > charlotteScore)
-                {
-                    gameWin();
-                }
-                else
-                {
-                    gameLoss();
-                }
-                return;
-            }
+            //timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            //if (timeRemaining <= 0)
+            //{
+            //    if (score > charlotteScore)
+            //    {
+            //        gameWin();
+            //    }
+            //    else
+            //    {
+            //        gameLoss();
+            //    }
+            //    return;
+            //}
             if (charlotteTimer <= 0)
             {
                 charlotteScore++;
                 charlotteDisplay.text = string.Format("Charlotte's Score : {0}", charlotteScore);
+                if (charlotteScore >= scoreGoal)
+                {
+                    gameLoss();
+                }
                 charlotteTimer = charlotteStart + Random.Range(-charlotteRange, charlotteRange);
             }
         }
@@ -110,12 +121,13 @@ public class TypingManager : MonoBehaviour
 
         charlotteTimer = charlotteStart + Random.Range(-charlotteRange, charlotteRange);
 
-        timeRemaining = timerStart;
-        float minutes = Mathf.FloorToInt(timeRemaining / 60);
-        float seconds = Mathf.FloorToInt(timeRemaining % 60);
-        timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        //timeRemaining = timerStart;
+        //float minutes = Mathf.FloorToInt(timeRemaining / 60);
+        //float seconds = Mathf.FloorToInt(timeRemaining % 60);
+        //timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
         selectedWord.gameObject.SetActive(true);
+        scoreUI.gameObject.SetActive(true);
         resetWord();
         timerPaused = true;
         pauseGame = false;
@@ -134,7 +146,8 @@ public class TypingManager : MonoBehaviour
         pauseGame = true;
         selectedWord.gameObject.SetActive(false);
         failScreen.gameObject.SetActive(true);
-        timerDisplay.text = "00:00";
+        scoreUI.gameObject.SetActive(false);
+        //timerDisplay.text = "00:00";
     }
 
     void gameWin()
@@ -142,7 +155,8 @@ public class TypingManager : MonoBehaviour
         pauseGame = true;
         selectedWord.gameObject.SetActive(false);
         winScreen.gameObject.SetActive(true);
-        timerDisplay.text = "00:00";
+        scoreUI.gameObject.SetActive(false);
+        //timerDisplay.text = "00:00";
     }
 
     string getRandomWord()
