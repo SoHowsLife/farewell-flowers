@@ -133,8 +133,8 @@ public class TypingManager : MonoBehaviour
         resetWord();
         timerPaused = true;
         pauseGame = false;
-        failScreen.SetActive(false);
-        winScreen.SetActive(false);
+        failScreen.gameObject.SetActive(false);
+        winScreen.gameObject.SetActive(false);
     }
     public void Proceed()
     {

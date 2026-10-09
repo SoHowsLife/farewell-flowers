@@ -53,37 +53,36 @@
     <UnityVersion>2021.3.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Minigames\Pottery\ArrowManager.cs" />
+    <Compile Include="Assets\LoadSceneTrigger.cs" />
     <Compile Include="Assets\Scripts\Minigames\Pottery\ArrowObject.cs" />
     <Compile Include="Assets\Scripts\GameSystems\DialogueHandler.cs" />
     <Compile Include="Assets\Scripts\Minigames\Dating\DatingManager.cs" />
-    <Compile Include="Assets\Scripts\Minigames\Typing\TypingManager.cs" />
-    <Compile Include="Assets\Scripts\Minigames\Typing\Word.cs" />
-    <Compile Include="Assets\Scripts\Minigames\Minigame.cs" />
-    <Compile Include="Assets\Scripts\Minigames\Typing\WordGenerator.cs" />
     <Compile Include="Assets\Scripts\GameSystems\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\GameSystems\CollisionInteractable.cs" />
     <Compile Include="Assets\Scripts\GameSystems\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Minigames\Typing\TypingManager.cs" />
+    <Compile Include="Assets\Scripts\GameSystems\SetCameraTargetTrigger.cs" />
     <Compile Include="Assets\Scripts\GameSystems\UpdateDiaryTrigger.cs" />
     <Compile Include="Assets\Scripts\GameSystems\DiaryManager.cs" />
-    <Compile Include="Assets\Scripts\Typing\Word.cs" />
+    <Compile Include="Assets\Scripts\Minigames\Typing\Word.cs" />
+    <Compile Include="Assets\Scripts\GameSystems\TogglePlayerInputTrigger.cs" />
+    <Compile Include="Assets\Scripts\Minigames\Minigame.cs" />
     <Compile Include="Assets\Scripts\Player\TransitionPlayerAnim.cs" />
     <Compile Include="Assets\Scripts\GameSystems\GameTrigger.cs" />
     <Compile Include="Assets\Scripts\GameSystems\ForceDiaryTrigger.cs" />
+    <Compile Include="Assets\MovePlayerTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputManager.cs" />
+    <Compile Include="Assets\Scripts\Minigames\Typing\WordGenerator.cs" />
     <Compile Include="Assets\Scripts\GameSystems\ScreenWipe.cs" />
     <Compile Include="Assets\Scripts\GameSystems\BasicFollowCamera.cs" />
+    <Compile Include="Assets\Scripts\GameSystems\SetActiveTrigger.cs" />
     <Compile Include="Assets\Scripts\GameSystems\SingleUseInteractable.cs" />
     <Compile Include="Assets\Scripts\GameSystems\PopupTrigger.cs" />
     <Compile Include="Assets\Scripts\GameSystems\Interactable.cs" />
-    <Compile Include="Assets\Scripts\GameSystems\TogglePlayerInputTrigger.cs" />
-    <Compile Include="Assets\Scripts\GameSystems\SetActiveTrigger.cs" />
-    <Compile Include="Assets\Scripts\GameSystems\SetCameraTargetTrigger.cs" />
-    <Compile Include="Assets\MovePlayerTrigger.cs" />
-    <Compile Include="Assets\LoadSceneTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -357,6 +356,9 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.8f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -757,17 +759,11 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
       <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
@@ -775,8 +771,11 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -784,8 +783,14 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -798,6 +803,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{28D48153-5C3E-FE25-C956-FA0309A779C1}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{E4DCCE10-C357-01A0-0711-D93EFFC7FB52}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{555FC62E-5976-464D-A755-14F595BCF5DF}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
