@@ -28,6 +28,7 @@ namespace GameSystems
         private void ChangeTarget(GameObject target)
         {
             transform.parent = target.transform;
+            transform.localPosition = Vector3.up + (Vector3.back * 5);
         }
     }
 }

@@ -22,7 +22,7 @@ public class TypingManager : MonoBehaviour
 
 
     private bool pauseGame = true;
-    private float timeRemaining;
+    //private float timeRemaining;
     private bool timerPaused = true;
     private int score = 0;
 
@@ -42,6 +42,7 @@ public class TypingManager : MonoBehaviour
         {
             return;
         }
+
         string input = Input.inputString.ToLower();
         if (!input.Equals(""))
         {
@@ -104,6 +105,7 @@ public class TypingManager : MonoBehaviour
                 charlotteTimer = charlotteStart + Random.Range(-charlotteRange, charlotteRange);
             }
         }
+
     }
 
     void resetWord()
@@ -119,7 +121,7 @@ public class TypingManager : MonoBehaviour
         scoreDisplay.text = string.Format("Your Score : {0}", score);
         charlotteDisplay.text = string.Format("Charlotte's Score : {0}", charlotteScore);
 
-        charlotteTimer = charlotteStart + Random.Range(-charlotteRange, charlotteRange);
+        charlotteTimer = Random.Range(charlotteStart, charlotteRange);
 
         //timeRemaining = timerStart;
         //float minutes = Mathf.FloorToInt(timeRemaining / 60);
@@ -131,8 +133,12 @@ public class TypingManager : MonoBehaviour
         resetWord();
         timerPaused = true;
         pauseGame = false;
-        failScreen.gameObject.SetActive(false);
-        winScreen.gameObject.SetActive(false);
+        failScreen.SetActive(false);
+        winScreen.SetActive(false);
+    }
+    public void Proceed()
+    {
+        selectedWord.gameObject.SetActive(false);
     }
 
     public void continueGame()
