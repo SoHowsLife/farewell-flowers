@@ -128,7 +128,6 @@ public class TypingManager : MonoBehaviour
         //float seconds = Mathf.FloorToInt(timeRemaining % 60);
         //timerDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        selectedWord.gameObject.SetActive(true);
         scoreUI.gameObject.SetActive(true);
         resetWord();
         timerPaused = true;
@@ -136,10 +135,10 @@ public class TypingManager : MonoBehaviour
         failScreen.gameObject.SetActive(false);
         winScreen.gameObject.SetActive(false);
     }
-    public void Proceed()
-    {
-        selectedWord.gameObject.SetActive(false);
-    }
+    //public void Proceed()
+    //{
+    //    selectedWord.gameObject.SetActive(false);
+    //}
 
     public void continueGame()
     {
@@ -150,7 +149,6 @@ public class TypingManager : MonoBehaviour
     void gameLoss()
     {
         pauseGame = true;
-        selectedWord.gameObject.SetActive(false);
         failScreen.gameObject.SetActive(true);
         scoreUI.gameObject.SetActive(false);
         //timerDisplay.text = "00:00";
@@ -159,7 +157,6 @@ public class TypingManager : MonoBehaviour
     void gameWin()
     {
         pauseGame = true;
-        selectedWord.gameObject.SetActive(false);
         winScreen.gameObject.SetActive(true);
         scoreUI.gameObject.SetActive(false);
         //timerDisplay.text = "00:00";
