@@ -12,10 +12,22 @@ public class ArrowManager : MonoBehaviour
     [SerializeField] private ArrowObject RArrow;
 
     [SerializeField] private Transform promptWindow;
+    [SerializeField] private Canvas gameUI;
+    [SerializeField] private Canvas winScreen;
 
     private List<ArrowObject> keys;
     private int difficulty = 4;
     private int index = 0;
+    private int score = 0;
+    private bool pauseGame = true;
+
+    [Header("Minigame Config")]
+    [Tooltip("Score to Reach")]
+    [SerializeField] private int scoreGoal = 10;
+    [Tooltip("How many Arrows to start with")]
+    [SerializeField] private int startingDifficulty = 4;
+    [Tooltip("How many Arrows are added upon completion")]
+    [SerializeField] private int increaseDifficulty = 1;
 
     private InputAction upAction;
     private InputAction downAction;
@@ -37,12 +49,16 @@ public class ArrowManager : MonoBehaviour
     void Start()
     {
         keys = new List<ArrowObject>();
-        resetKeys();
+        resetGame();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (pauseGame)
+        {
+            return;
+        }
         //Dev Key FOR TESTING
         if (Input.GetKeyDown(KeyCode.F1))
         {
@@ -78,7 +94,13 @@ public class ArrowManager : MonoBehaviour
             animator.SetTrigger("Correct");
             if (index >= keys.Count)
             {
-                difficulty += 1;
+                score++;
+                if (score >= scoreGoal)
+                {
+                    gameWin();
+                    return;
+                }
+                difficulty += increaseDifficulty;
                 resetKeys();
             }
         }
@@ -120,8 +142,31 @@ public class ArrowManager : MonoBehaviour
         index = 0;
     }
 
-    public void onUp()
+    public void resetGame()
     {
-        Debug.Log("Up");
+        difficulty = startingDifficulty;
+        gameUI.gameObject.SetActive(true);
+        score = 0;
+        resetKeys();
+        winScreen.gameObject.SetActive(false);
+        pauseGame = false;
+    }
+
+    public void continueGame()
+    {
+        Debug.Log("Go to next Scene");
+        //TO DO
+    }
+
+    void gameWin()
+    {
+        gameUI.gameObject.SetActive(false);
+        winScreen.gameObject.SetActive(true);
+        pauseGame = true;
+    }
+
+    void gameLoss()
+    {
+        //TO DO
     }
 }

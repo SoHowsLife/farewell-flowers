@@ -214,6 +214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 28198806245305106, guid: 6ddcd6512f7f9bb4fb3198ae1f6c9faa, type: 3}
+      propertyPath: scoreGoal
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 410600178262328807, guid: 6ddcd6512f7f9bb4fb3198ae1f6c9faa, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -314,6 +318,14 @@ PrefabInstance:
       propertyPath: m_ChildScaleHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4270861476813427635, guid: 6ddcd6512f7f9bb4fb3198ae1f6c9faa, type: 3}
+      propertyPath: m_Name
+      value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5811601910101485909, guid: 6ddcd6512f7f9bb4fb3198ae1f6c9faa, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1448881279}
     - target: {fileID: 7174427858671620256, guid: 6ddcd6512f7f9bb4fb3198ae1f6c9faa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
